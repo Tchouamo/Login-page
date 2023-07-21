@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/6545e17a2a.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLOGINCompany.css">
+    <title>LOGIN AS A COMPANY</title>
+</head>
+<body>
+    <div class="box">
+            <div class="form-box">
+
+                <h1 id="title">Sign Up As A Company</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id ="Field1">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i><input type="text" placeholder="Enter the name of the Company">
+                        </div>
+                        
+                        <div class="input-field">
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i><input type="email" placeholder="Enter it's email">
+                        </div>
+
+                        <div class="input-field" id ="Field2">
+                            <i class="fa fa-phone" aria-hidden="true"></i></i><input type="number" placeholder="Enter it's contact">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa fa-cog" aria-hidden="true"></i><input type="password" placeholder="Enter it's password">
+                        </div>
+
+                        <div class="btn-field">
+                            <button type="button" id="signupBtn">Sign Up</button>
+                            <button type="button" class="disable" id="signinBtn">Sign In</button>
+                        </div>
+                        </div>
+                    </form>
+            </div>
+    </div>
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let Field1 = document.getElementById("Field1");
+        let Field2 = document.getElementById("Field2");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick = function(){
+            Field1.style.display = "none";
+            Field2.style.display = "none";
+            title.innerHTML = "Sign In As A Company";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function(){
+            Field1.style.display = "";
+            Field2.style.display = "";
+            title.innerHTML = "Sign Up As A Company";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+
+    </script>
+</body>
+</html>

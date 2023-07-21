@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/6545e17a2a.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLOGINStudent.css">
+    <title>LOGIN AS A COMPANY</title>
+</head>
+<body>
+    <div class="box">
+            <div class="form-box">
+
+                <h1 id="title">Sign Up As A Student</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id ="Field1">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i><input type="text" placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="input-field" id ="Field2">
+                            <i class="fa fa-male" aria-hidden="true"></i><input type="text" placeholder="Enter your gender">
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i><input type="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="input-field" id ="Field3">
+                            <i class="fa fa-phone" aria-hidden="true"></i></i><input type="number" placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="input-field" id ="Field4">
+                            <i class="fa fa-map-o" aria-hidden="true"></i><input type="text" placeholder="Enter your address of location">
+                        </div>
+
+                        <div class="input-field" id ="Field5">
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i><input type="text" placeholder="Enter your Field of study">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa fa-cog" aria-hidden="true"></i><input type="password" placeholder="Enter your password">
+                        </div>
+
+                        <div class="input-field" id ="Field6">
+                            <i class="fa fa-address-book" aria-hidden="true"></i><input type="text" placeholder="Write a small biography">
+                        </div>
+
+                        <div class="btn-field">
+                            <button type="button" id="signupBtn">Sign Up</button>
+                            <button type="button" class="disable" id="signinBtn">Sign In</button>
+                        </div>
+                        </div>
+                    </form>
+            </div>
+    </div>
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let Field1 = document.getElementById("Field1");
+        let Field2 = document.getElementById("Field2");
+        let Field3 = document.getElementById("Field3");
+        let Field4 = document.getElementById("Field4");
+        let Field5 = document.getElementById("Field5");
+        let Field6 = document.getElementById("Field6");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick = function(){
+            Field1.style.display = "none";
+            Field2.style.display = "none";
+            Field3.style.display = "none";
+            Field4.style.display = "none";
+            Field5.style.display = "none";
+            Field6.style.display = "none";
+            title.innerHTML = "Sign In As A Student";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function(){
+            Field1.style.display = "";
+            Field2.style.display = "";
+            Field3.style.display = "";
+            Field4.style.display = "";
+            Field5.style.display = "";
+            Field6.style.display = "";
+            title.innerHTML = "Sign Up As A Student";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+
+    </script>
+</body>
+</html>
